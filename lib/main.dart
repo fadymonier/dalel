@@ -1,6 +1,7 @@
 import 'package:dalel/core/routes/app_router.dart';
 import 'package:dalel/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const Dalel());
@@ -11,10 +12,15 @@ class Dalel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: ThemeData(scaffoldBackgroundColor: AppColors.offWhite),
-      debugShowCheckedModeBanner: false,
-      routerConfig: router,
+    return ScreenUtilInit(
+      designSize: Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp.router(
+        theme: ThemeData(scaffoldBackgroundColor: AppColors.offWhite),
+        debugShowCheckedModeBanner: false,
+        routerConfig: router,
+      ),
     );
   }
 }
