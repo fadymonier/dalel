@@ -13,8 +13,10 @@ class OnboardingWidgetBody extends StatelessWidget {
   final PageController _controller = PageController();
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: 550.h,
       child: PageView.builder(
+        physics: const BouncingScrollPhysics(),
         controller: _controller,
         itemCount: 3,
         itemBuilder: (context, index) {
@@ -22,7 +24,14 @@ class OnboardingWidgetBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 10.0.r),
             child: Column(
               children: [
-                Image.asset(Assets.imagesOnboarding1),
+                Container(
+                  width: 343.w,
+                  height: 290.h,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(Assets.imagesOnboarding1),
+                          fit: BoxFit.fill)),
+                ),
                 SizedBox(
                   height: 24.h,
                 ),
@@ -37,6 +46,8 @@ class OnboardingWidgetBody extends StatelessWidget {
                   style: CustomTextStyles.poppins500style24
                       .copyWith(fontWeight: FontWeight.w600),
                   textAlign: TextAlign.center,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(
                   height: 16.h,

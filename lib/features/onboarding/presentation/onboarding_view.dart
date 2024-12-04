@@ -1,6 +1,5 @@
 import 'package:dalel/core/utils/app_colors.dart';
 import 'package:dalel/core/utils/app_strings.dart';
-import 'package:dalel/core/utils/app_text_styles.dart';
 import 'package:dalel/core/widgets/custom_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,13 +15,17 @@ class OnboardingView extends StatelessWidget {
       child: Scaffold(
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0.r),
-          child: Column(
+          child: ListView(
+            physics: const BouncingScrollPhysics(),
             children: [
               SizedBox(
                 height: 40.h,
               ),
               const CustomNavBar(),
               OnboardingWidgetBody(),
+              SizedBox(
+                height: 88.h,
+              ),
               CustomBtn(
                 onPressed: () {},
                 color: AppColors.primaryColor,
