@@ -1,11 +1,10 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:dalel/core/utils/app_text_styles.dart';
+import 'package:dalel/features/onboarding/data/models/onboarding_model.dart';
 import 'package:dalel/features/onboarding/presentation/widgets/custom_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/utils/app_assets.dart';
 
 class OnboardingWidgetBody extends StatelessWidget {
   OnboardingWidgetBody({super.key});
@@ -14,11 +13,11 @@ class OnboardingWidgetBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 550.h,
+      height: 530.h,
       child: PageView.builder(
         physics: const BouncingScrollPhysics(),
         controller: _controller,
-        itemCount: 3,
+        itemCount: onBoardingData.length,
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0.r),
@@ -27,9 +26,9 @@ class OnboardingWidgetBody extends StatelessWidget {
                 Container(
                   width: 343.w,
                   height: 290.h,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage(Assets.imagesOnboarding1),
+                          image: AssetImage(onBoardingData[index].imagePath),
                           fit: BoxFit.fill)),
                 ),
                 SizedBox(
@@ -42,7 +41,7 @@ class OnboardingWidgetBody extends StatelessWidget {
                   height: 32.h,
                 ),
                 Text(
-                  "Explore The history with \n Dalel in a smart way",
+                  onBoardingData[index].title,
                   style: CustomTextStyles.poppins500style24
                       .copyWith(fontWeight: FontWeight.w600),
                   textAlign: TextAlign.center,
@@ -52,9 +51,10 @@ class OnboardingWidgetBody extends StatelessWidget {
                 SizedBox(
                   height: 16.h,
                 ),
-                const Text(
-                  "Using our app’s history libraries \n you can find many historical periods",
-                  style: CustomTextStyles.poppins300style16,
+                Text(
+                  onBoardingData[index].subTitle,
+                  style:
+                      CustomTextStyles.poppins300style16.copyWith(fontSize: 14),
                   textAlign: TextAlign.center,
                 ),
               ],
