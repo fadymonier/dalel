@@ -7,16 +7,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingWidgetBody extends StatelessWidget {
-  OnboardingWidgetBody({super.key});
-
-  final PageController _controller = PageController();
+  const OnboardingWidgetBody(
+      {super.key, required this.controller, this.onPageChanged});
+  final PageController controller;
+  final Function(int)? onPageChanged;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 530.h,
+      height: 525.h,
       child: PageView.builder(
+        onPageChanged: onPageChanged,
         physics: const BouncingScrollPhysics(),
-        controller: _controller,
+        controller: controller,
         itemCount: onBoardingData.length,
         itemBuilder: (context, index) {
           return Padding(
@@ -35,7 +37,7 @@ class OnboardingWidgetBody extends StatelessWidget {
                   height: 24.h,
                 ),
                 CustomIndicator(
-                  controller: _controller,
+                  controller: controller,
                 ),
                 SizedBox(
                   height: 32.h,

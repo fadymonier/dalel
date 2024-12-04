@@ -1,14 +1,23 @@
-import 'package:dalel/core/utils/app_colors.dart';
-import 'package:dalel/core/utils/app_strings.dart';
-import 'package:dalel/core/widgets/custom_btn.dart';
+import 'package:dalel/core/functions/navigation.dart';
+
+import 'package:dalel/core/widgets/get_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'widgets/custom_navbar.dart';
 import 'widgets/onboarding_body.dart';
 
-class OnboardingView extends StatelessWidget {
+class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
+
+  @override
+  State<OnboardingView> createState() => _OnboardingViewState();
+}
+
+class _OnboardingViewState extends State<OnboardingView> {
+  final PageController _controller = PageController(initialPage: 0);
+  int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -21,16 +30,22 @@ class OnboardingView extends StatelessWidget {
               SizedBox(
                 height: 40.h,
               ),
-              const CustomNavBar(),
-              OnboardingWidgetBody(),
+              CustomNavBar(
+                onTap: () {
+                  customNavigate(context, "/SignUp");
+                },
+              ),
+              OnboardingWidgetBody(
+                controller: _controller,
+                onPageChanged: (index) {
+                  setState(() {});
+                  currentIndex = index;
+                },
+              ),
               SizedBox(
                 height: 88.h,
               ),
-              CustomBtn(
-                onPressed: () {},
-                color: AppColors.primaryColor,
-                text: AppStrings.next,
-              ),
+              GetButtons(currentIndex: currentIndex, controller: _controller),
               SizedBox(
                 height: 17.h,
               ),

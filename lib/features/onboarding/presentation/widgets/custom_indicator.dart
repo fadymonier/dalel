@@ -1,4 +1,5 @@
 import 'package:dalel/core/utils/app_colors.dart';
+import 'package:dalel/features/onboarding/data/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -12,7 +13,7 @@ class CustomIndicator extends StatelessWidget {
   ) {
     return SmoothPageIndicator(
       controller: controller,
-      count: 3,
+      count: onBoardingData.length,
       effect: ExpandingDotsEffect(
           activeDotColor: AppColors.deepBrown, dotHeight: 8, dotWidth: 10),
     );
