@@ -1,10 +1,8 @@
-import 'package:dalel/core/cache/cache_helper.dart';
 import 'package:dalel/core/functions/navigation.dart';
-
 import 'package:dalel/core/widgets/get_buttons.dart';
+import 'package:dalel/features/splash/presentation/view/functions/onboarding_fn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'widgets/custom_navbar.dart';
 import 'widgets/onboarding_body.dart';
 
@@ -33,8 +31,7 @@ class _OnboardingViewState extends State<OnboardingView> {
               ),
               CustomNavBar(
                 onTap: () {
-                  CacheHelper()
-                      .saveData(key: "isOnBoardingVisited", value: true);
+                  onBoardingVisited();
                   customNavigate(context, "/SignUp");
                 },
               ),
