@@ -14,7 +14,7 @@ class OnboardingWidgetBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 525.h,
+      height: 530.h,
       child: PageView.builder(
         onPageChanged: onPageChanged,
         physics: const BouncingScrollPhysics(),

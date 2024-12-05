@@ -1,3 +1,4 @@
+import 'package:dalel/core/cache/cache_helper.dart';
 import 'package:dalel/core/functions/navigation.dart';
 
 import 'package:dalel/core/widgets/get_buttons.dart';
@@ -28,10 +29,12 @@ class _OnboardingViewState extends State<OnboardingView> {
             physics: const BouncingScrollPhysics(),
             children: [
               SizedBox(
-                height: 40.h,
+                height: 30.h,
               ),
               CustomNavBar(
                 onTap: () {
+                  CacheHelper()
+                      .saveData(key: "isOnBoardingVisited", value: true);
                   customNavigate(context, "/SignUp");
                 },
               ),
