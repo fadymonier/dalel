@@ -8,9 +8,6 @@ Using our app’s history libraries, you can discover historical periods from ev
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/bb7a78bf-bb06-4cbb-a847-b00392620cb4" width="120" /> <!-- Splash -->
-</p>
-
-<p align="center">
   <img src="https://github.com/user-attachments/assets/6bd38a7d-839e-42bf-af06-3db7e6573b98" width="120" /> <!-- Sign In -->
   <img src="https://github.com/user-attachments/assets/6ef4e837-1667-4534-9fd7-d6bea276efdf" width="120" /> <!-- Sign Up -->
   <img src="https://github.com/user-attachments/assets/1ba187dd-ac6e-4ee9-95c5-3ea1a3ebc7cf" width="120" /> <!-- Home -->
@@ -32,9 +29,6 @@ Using our app’s history libraries, you can discover historical periods from ev
   <img src="https://github.com/user-attachments/assets/4a5af260-e10d-48b0-b603-054c6c25f7b1" width="120" /> <!-- Forgot Password -->
   <img src="https://github.com/user-attachments/assets/2051f5de-f0db-4c63-8c18-bc4da378ead3" width="120" /> <!-- Verify 1 -->
   <img src="https://github.com/user-attachments/assets/7803650a-57b8-48f0-9157-10c7a80110a9" width="120" /> <!-- Verify -->
-</p>
-
-<p align="center">
   <img src="https://github.com/user-attachments/assets/26262a09-cc0d-4702-afde-48bc89dd47c6" width="120" /> <!-- Success -->
 </p>
 
