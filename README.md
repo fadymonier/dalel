@@ -13,6 +13,7 @@ Using our app’s history libraries, you can discover historical periods from ev
   <img src="https://github.com/user-attachments/assets/0fee9e93-5068-4ef7-b762-cebfb01b7373" width="150" />
   <img src="https://github.com/user-attachments/assets/a7e11a64-3377-4e81-b541-bd09f574fb51" width="150" />
   <img src="https://github.com/user-attachments/assets/cdc3848f-220c-4c19-9d3a-bf16af90087c" width="150" />
+<img src="https://github.com/user-attachments/assets/76f7eddf-5113-4a17-a33d-d4ca986459b4" width="150" />
 </p>
 
 <p align="center">
