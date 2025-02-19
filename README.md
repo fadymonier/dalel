@@ -40,7 +40,7 @@ Using our app’s history libraries, you can discover historical periods from ev
 ## Installation
 1. Clone the repository:
    ```sh
- git clone  https://github.com/fadymonier/dalel.git
+   git clone https://github.com/fadymonier/dalel.git
    ```
 2. Navigate to the project directory:
    ```sh
